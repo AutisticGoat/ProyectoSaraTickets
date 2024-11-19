@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans:400,400i,700,700i&subset=greek-ext');
+body{
+    font-family: Helvetica;
+    -webkit-font-smoothing: antialiased;
+    background: rgba(252,196,131, 1);
+}
+*{
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+/* Guti Tabla */
+.table-wrapper{
+    margin: 10px 70px 70px;
+    box-shadow: 0px 35px 50px rgba( 0, 0, 0, 0.2 );
+}
+
+.table-wrapper h2{
+    color: #473A4D;
+}
+
+.fl-table {
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: normal;
+    border: none;
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 100%;
+    white-space: nowrap;
+    background-color: #473A4D;
+}
+
+.fl-table td, .fl-table th {
+    text-align: center;
+    padding: 8px;
+    color: #F2EBE3;
+    font-size: 20px;
+}
+
+.fl-table td {
+    border-right: 1px solid #A7784F;
+    font-size: 15px;
+}
+
+.fl-table thead th {
+    color: #F2EBE3;
+    background: #2D191C;
+}
+
+
+.fl-table thead th:nth-child(odd) {
+    color: #F2EBE3;
+    background: #0D141C;
+}
+
+.fl-table tr:nth-child(even) {
+    color: #F2EBE3;
+    background: #291B26;
+}
+
+/* Guti Tabla Responsiva */
+
+@media (max-width: 767px) {
+    .fl-table {
+        display: block;
+        width: 100%;
+    }
+    .table-wrapper:before{
+        content: "Scroll horizotal>";
+        display: block;
+        text-align: right;
+        font-size: 11px;
+        color: white;
+        padding: 0 0 10px;
+    }
+    .fl-table thead, .fl-table tbody, .fl-table thead th {
+        display: block;
+    }
+    .fl-table thead th:last-child{
+        border-bottom: none;
+    }
+    .fl-table thead {
+        float: left;
+    }
+    .fl-table tbody {
+        width: auto;
+        position: relative;
+        overflow-x: auto;
+    }
+    .fl-table td, .fl-table th {
+        padding: 20px .625em .625em .625em;
+        height: 60px;
+        vertical-align: middle;
+        box-sizing: border-box;
+        overflow-x: hidden;
+        overflow-y: auto;
+        width: 120px;
+        font-size: 13px;
+        text-overflow: ellipsis;
+    }
+    .fl-table thead th {
+        text-align: left;
+        border-bottom: 1px solid #f7f7f9;
+    }
+    .fl-table tbody tr {
+        display: table-cell;
+    }
+    .fl-table tbody tr:nth-child(odd) {
+        background: none;
+    }
+    .fl-table tr:nth-child(even) {
+        background: transparent;
+    }
+    .fl-table tr td:nth-child(odd) {
+        background: #291B26;
+        border-right: 1px solid #E6E4E4;
+    }
+    .fl-table tr td:nth-child(even) {
+        border-right: 1px solid #E6E4E4;
+    }
+    .fl-table tbody td {
+        display: block;
+        text-align: center;
+    }
+}
+
+/* Guti Boton */
+
+.boton1 {
+  background: #291B26;
+  border: 1px solid #473A4D;
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+  box-sizing: border-box;
+  color: #F2EBE3;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 16px;
+  min-height: 40px;
+  outline: 0;
+  padding: 12px 14px;
+  text-align: center;
+  text-rendering: geometricprecision;
+  text-transform: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+}
+
+.button1:hover,
+.button1:active {
+  background-color: initial;
+  background-position: 0 0;
+  color: #F2EBE3;
+}
+
+.button-1:active {
+  opacity: .5;
+}
+
+/* Guti Select */
+
+.Select1{
+  display: inline-block;
+  background-color: #A7784F;
+  color: white;
+  padding: 12px;
+  width: 150px;
+  border: none;
+  font-size: 14px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+  outline: none;
+}
+
+.Select1::before{
+    content: "\f13a";
+    font-family: FontAwesome;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 20%;
+    height: 100%;
+    text-align: center;
+    font-size: 28px;
+    line-height: 45px;
+    color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0.1);
+    pointer-events: none;
+}
+
+.Select1:hover::before {
+    color: rgba(255, 255, 255, 0.6);
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+ 
+.Select1 select option {
+    padding: 30px;
+}
+
+/* Guti Input */
+
+.input1{ 
+  border:0;
+  border-bottom:1px solid #A7784F;  
+  background:transparent;
+  width:100%;
+  padding:8px 0 5px 0;
+  font-size:16px;
+  color:#fff;
+}
+.input1:focus{ 
+ border:none;	
+ outline:none;
+ border-bottom:1px solid #E6E4E4;	
+}
+
+/* Guti Input Date */
+
+input[type="date"]{
+    background-color: #291B26;
+    position: relative;
+    color: #E6E4E4;
+    border-color: #2D191C;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+::-webkit-calendar-picker-indicator{
+    background-color: #E6E4E4;
+    padding: 5px;
+    cursor: pointer;
+    border-radius: 3px;
+}
