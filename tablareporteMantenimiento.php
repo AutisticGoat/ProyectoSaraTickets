@@ -15,8 +15,8 @@ if($queryCP->execute())
     <h2>Reportes</h2>
     <thead>
         <tr>
-            <th>ID Reporte<br></th>
-            <th>ID Usuario del reporte</th>
+
+
             <th>Nombre Usuario del Reporte</th>
             <th>Area</th>
             <th>Descripcion</th>
@@ -84,8 +84,8 @@ if($queryCP->execute())
       echo ' 
             <tbody>
             <tr>
-            <td>'.htmlspecialchars($idProblemaActual).'</td>
-            <td>'.htmlspecialchars($idUsuarioProblemaActual).'</td>
+
+
             <td>'.htmlspecialchars($nombreUsuarioProblemaActual).'</td>
             <td>'.htmlspecialchars($areaProblemaActual).'</td>
             <td>'.htmlspecialchars($descProblemaActual).'</td>

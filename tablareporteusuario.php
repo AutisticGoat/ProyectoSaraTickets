@@ -71,7 +71,7 @@ if($queryCUP->execute())
       echo ' 
             <tbody>
             <tr>
-            <td>'.htmlspecialchars($idProblemaActual).'</td>
+
             <td>'.htmlspecialchars($_SESSION['nombreUsuario']).'</td>
             <td>'.htmlspecialchars($_SESSION['areaUsuario']).'</td>
             <td>'.htmlspecialchars($descProblemaActual).'</td>

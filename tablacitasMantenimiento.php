@@ -17,12 +17,12 @@ if ($queryCC->execute())
     <h2>Citas Pendientes</h2>
     <thead>
         <tr>
-            <th>ID Cita</th>
-            <th>ID Usuario</th>
+
+
             <th>Nombre Usuario</th>
-            <th>ID Mantenimiento</th>
+
             <th>Nombre mantenimiento citado</th>
-            <th>ID Problema</th>
+
             <th>Descripcion</th>
             <th>Area</th>
             <th>Fecha Agendada</th>
@@ -70,12 +70,12 @@ if ($queryCC->execute())
             echo ' 
             <tbody>
             <tr>
-            <td>'.htmlspecialchars($idCitaActual).'</td>
-            <td>'.htmlspecialchars($idUsuarioActual).'</td>
+
+
             <td>'.htmlspecialchars($nombreUsuarioActual).'</td>
-            <td>'.htmlspecialchars($idMantenimiento).'</td>
+
             <td>'.htmlspecialchars($nombreMantenimiento).'</td>
-            <td>'.htmlspecialchars($idProblemaActual).'</td>
+
             <td>'.htmlspecialchars($descProblemaActual).'</td>
             <td>'.htmlspecialchars($areaProblemaActual).'</td>
             <td>'.htmlspecialchars($fechaActual).'</td>
