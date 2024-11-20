@@ -2,10 +2,8 @@
 session_start();
 require_once("conn.php");
 
-$string_queryCUP = "SELECT * FROM usuarioproblema up INNER JOIN problematicket pt ON up.IdProblema = pt.IdProblema INNER JOIN ticket t ON t.id = pt.IdTicket WHERE up.IdUsuario = ? ORDER BY t.HoraEntrada DESC ";
-
 //Conseguir Usuario y Problema
-$queryCUP = $conn -> prepare($string_queryCUP);
+$queryCUP = $conn -> prepare("SELECT * FROM usuarioproblema WHERE IdUsuario = ?");
 $queryCUP -> bind_param("i",$_SESSION["idUsuario"]);
 
 if($queryCUP->execute())
@@ -39,10 +37,7 @@ if($queryCUP->execute())
 
       //Conseguir Ticket con el Id del Problema Actual
 
-
-      $string_queryCT = "SELECT * FROM problematicket pt INNER JOIN ticket t ON t.id = pt.IdTicket WHERE pt.IdProblema = ? ORDER BY t.HoraEntrada DESC ";
-
-      $queryCT = $conn -> prepare($string_queryCT);
+      $queryCT = $conn -> prepare("SELECT * FROM problematicket WHERE IdProblema = ? ");
       $queryCT -> bind_param("i",$idProblemaActual);
       $queryCT->execute();
       $resultCT = $queryCT->get_result();
@@ -52,9 +47,7 @@ if($queryCUP->execute())
 
       //Conseguir Descripcion y Estatus del Problema Actual con su Id
 
-      $string_queryCDE = "SELECT * FROM problema p INNER JOIN problematicket pt ON p.ID = pt.IdProblema INNER JOIN ticket t ON t.id = pt.IdTicket WHERE p.ID = ? ORDER BY t.HoraEntrada DESC";
-
-      $queryCDE = $conn -> prepare($string_queryCDE);
+      $queryCDE = $conn -> prepare("SELECT * FROM problema WHERE ID = ?");
       $queryCDE->bind_param("i",$idProblemaActual);
       $queryCDE->execute();
       $resultCDE = $queryCDE->get_result();
@@ -65,9 +58,7 @@ if($queryCUP->execute())
 
       //Conseguir Horas del ticket con Su Id
 
-      $string_queryCH = "SELECT * FROM ticket t INNER JOIN problematicket pt ON t.ID = pt.IdTicket INNER JOIN problema p ON p.ID = pt.IdProblema WHERE p.ID = ? ORDER BY t.HoraEntrada DESC";
-
-      $queryCH = $conn -> prepare($string_queryCH);
+      $queryCH = $conn -> prepare("SELECT * FROM ticket WHERE ID = ?");
       $queryCH->bind_param("i",$idProblemaActual);
       $queryCH->execute();
       $resultCH = $queryCH->get_result();
