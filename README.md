@@ -1,4 +1,4 @@
-# ¡Bienvenido a mi Proyecto!
+# Hololive Goat
 
  Quiero follarme a Kamala.
 
@@ -8,7 +8,7 @@ A veces me masturbo imaginando que me la estoy follando con sus grandes tetas, p
 No pararé hasta que pueda follarme a Kamala porque mi polla no estará satisfecha hasta que entre dentro de Kamala. 
 Me gusta follar furries, pero Kamala es el final boss. ¿Alguien puede ayudarme? 
 
-## Descripción
+## Hololive Goat
 
 -b-boom... P-podrias? >\< embarazarme...?? se sonroja
 
