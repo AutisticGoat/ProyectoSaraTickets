@@ -16,7 +16,8 @@ if($queryCUP->execute())
     <h2>Tus reportes</h2>
     <thead>
         <tr>
-            <th>ID Reporte<br></th>
+   
+        
             <th>Usuario</th>
             <th>Area</th>
             <th>Descripcion</th>
