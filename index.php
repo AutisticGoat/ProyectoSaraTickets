@@ -63,9 +63,6 @@ if(isset($_SESSION['nombreUsuario']))
                   <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col logo_section">
                      <div class="full">
                         <div class="center-desk">
-                           <div class="logo">
-                              <a href="index.html"><img src="" alt="" /></a>
-                           </div>
                         </div>
                      </div>
                   </div>
@@ -99,9 +96,8 @@ if(isset($_SESSION['nombreUsuario']))
       <!-- end header inner -->
       <!-- end header -->
       <!-- banner -->
-      <section class="banner_main">
+      <section class="banner_main1">
          <div id="banner1" class="carousel slide" data-ride="carousel">
-            
             <div class="carousel-inner">
                <div class="carousel-item active">
                   <div class="container">
@@ -110,13 +106,8 @@ if(isset($_SESSION['nombreUsuario']))
                            <div class="col-md-6">
                               <div class="text-bg">
                                  <span></span>
-                                 <h1>Qwirr</h1>
-                                 <p>Bienvenido al sistema de resolucion de problemas de Qwirr</p>
-                              </div>
-                           </div>
-                           <div class="col-md-6">
-                              <div class="text_img">
-                                 <figure><img src="" alt=""/></figure>
+                                 <h1>"Minerva"</h1>
+                                 <p>Bienvenido al sistema Minerva de resolucion de problemas</p>
                               </div>
                            </div>
                         </div>
@@ -149,7 +140,7 @@ if(isset($_SESSION['nombreUsuario']))
                      <div class="row">
                         <div class="col-md-4 margin_bottom1">
                            <div class="product_box">
-                              <figure><img src="images/product1.png" alt="#"/></figure>
+                              <figure><img src="images/ImgPC.png" alt="#" class="imagenes"/></figure>
                               <form action="reporte.php" method="post">
                                  <button style="background: none;" value="Computadora de Escritorio" name="Equipo"><h3>Computadora de Escritorio</h3></button>
                               </form>
@@ -157,7 +148,7 @@ if(isset($_SESSION['nombreUsuario']))
                         </div>
                         <div class="col-md-4 margin_bottom1">
                            <div class="product_box">
-                              <figure><img src="images/product2.png" alt="#"/></figure>
+                              <figure><img src="images/ImgLaptop.png" alt="#" class="imagenes"/></figure>
                               <form action="reporte.php" method="post">
                                  <button style="background: none;" value="Laptop" name="Equipo"><h3>Laptop</h3></button>
                               </form>
@@ -165,7 +156,7 @@ if(isset($_SESSION['nombreUsuario']))
                         </div>
                         <div class="col-md-4 margin_bottom1">
                            <div class="product_box">
-                              <figure><img src="images/product3.png" alt="#"/></figure>
+                              <figure><img src="images/ImgTelefono.png" alt="#" class="imagenes"/></figure>
                               <form action="reporte.php" method="post">
                                  <button style="background: none;" value="Telefono" name="Equipo"><h3>Telefono</h3></button>
                               </form>
@@ -173,7 +164,7 @@ if(isset($_SESSION['nombreUsuario']))
                         </div>
                         <div class="col-md-4 margin_bottom1">
                            <div class="product_box">
-                              <figure><img src="images/product4.png" alt="#"/></figure>
+                              <figure><img src="images/ImgImpresora.png" alt="#" class="imagenes"/></figure>
                               <form action="reporte.php" method="post" name="Equipo">
                                  <button style="background: none;" value="Impresora"><h3>Impresora</h3></button>
                               </form>
@@ -181,7 +172,7 @@ if(isset($_SESSION['nombreUsuario']))
                         </div>
                         <div class="col-md-4 margin_bottom1">
                            <div class="product_box">
-                              <figure><img src="images/product5.png" alt="#"/></figure>
+                              <figure><img src="images/ImgTablet.png" alt="#" class="imagenes"/></figure>
                               <form action="reporte.php" method="post">
                                  <button style="background: none;" value="Tablet"  name="Equipo"><h3>Tablet</h3></button>
                               </form>

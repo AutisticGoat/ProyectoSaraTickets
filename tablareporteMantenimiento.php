@@ -10,8 +10,7 @@ if($queryCP->execute())
 { 
 
    echo '
-   <link rel="stylesheet" href="css/style.css">
-<link rel="stylesheet" href="css/tabla.css">
+<link rel="stylesheet" href="css/Guti.css">
 
 <div class="table-wrapper" role="region" tabindex="0">
 <table class="fl-table">
@@ -104,12 +103,12 @@ if($queryCP->execute())
             
             <form method="post" action="cambiarestatus.php">
             <input name="id" value="'.htmlspecialchars($idProblemaActual).'" style="display:none;"></input>
-            <select name="estatus" value="Reportado" selected required>
+            <select class="Select1" name="estatus" value="Reportado" selected required>
             <option value="Reportado">Reportado</option>
             <option value="En proceso de solucion">En proceso de solucion</option>
             <option value="Solucionado">Solucionado</option>
             </select> <br> 
-            <button>Cambiar estado</button>
+            <button class="boton1">Cambiar estado</button>
             </form>
             
             </td>
@@ -121,7 +120,7 @@ if($queryCP->execute())
             <input name="idUsuario" value="'.htmlspecialchars($idUsuarioProblemaActual).'" style="display:none;"></input>
             <input name="idMantenimiento" value="'.htmlspecialchars($_SESSION['idMantenimiento']).'" style="display:none;"></input>
             <input type="date" id="start" name="fecha" min="'.htmlspecialchars(date("y-m-d")).'" max="2999-12-31" required />
-            <button>Agendar cita</button>
+            <button class="boton1">Agendar cita</button>
             </form>
             
             
@@ -137,7 +136,7 @@ echo<<<HTML
 </div>
 
 <form action="indexMAN.html">
-<button><h3>De vuelta al index</h3></button>
+<button class="boton1"><h3>De vuelta al index</h3></button>
 </form>
 
 
