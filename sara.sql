@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 16-11-2024 a las 02:13:18
+-- Tiempo de generación: 25-11-2024 a las 05:44:37
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de datos: `sara`
+-- Base de datos: `sistematicketsreporte`
 --
 
 -- --------------------------------------------------------
@@ -42,9 +42,17 @@ CREATE TABLE `citas` (
 --
 
 INSERT INTO `citas` (`ID`, `IdUsuario`, `IdProblema`, `IdMantenimiento`, `FechaAgendada`, `Estatus`, `Comentario`) VALUES
-(1, 2, 2, 1, '2024-11-19', 'Sin presentar', 'Te estas tardando, eh?'),
-(2, 2, 3, 1, '2024-11-18', 'Completa', 'no'),
-(3, 2, 11, 1, '2024-11-18', 'Sin presentar', 'gegege');
+(15, 2, 1, 1, '2024-11-18', 'Sin presentar', 'El problema podría deberse a un cable de video suelto.'),
+(16, 3, 2, 2, '2024-11-19', 'En Proceso', 'Se sospecha que el sistema operativo necesita una optimización.'),
+(17, 4, 3, 3, '2024-11-20', 'Completado', 'Pantalla táctil presenta daño físico, necesita reemplazo.'),
+(18, 5, 4, 1, '2024-11-21', 'Sin presentar', 'Teclado posiblemente tenga suciedad interna o daño mecánico.'),
+(19, 2, 5, 2, '2024-11-22', 'En Proceso', 'La tablet está bloqueada por exceder intentos de contraseña.'),
+(20, 3, 6, 3, '2024-11-18', 'Completado', 'La impresora presenta problemas en los inyectores de tinta.'),
+(21, 4, 7, 1, '2024-11-19', 'Sin presentar', 'La pantalla cambia colores debido a un posible fallo en la tarjeta gráfica.'),
+(22, 5, 8, 2, '2024-11-20', 'En Proceso', 'La tablet podría tener problemas en la batería o la placa madre.'),
+(23, 2, 9, 3, '2024-11-21', 'Completado', 'El problema de conexión parece deberse a una mala configuración de red.'),
+(24, 3, 10, 1, '2024-11-22', 'En Proceso', 'La tablet no tiene permisos para descargar el software necesario.'),
+(25, 4, 11, 2, '2024-11-18', 'Sin presentar', 'La impresora tiene problemas en el cabezal de impresión.');
 
 -- --------------------------------------------------------
 
@@ -64,7 +72,9 @@ CREATE TABLE `mantenimiento` (
 --
 
 INSERT INTO `mantenimiento` (`ID`, `Nombre`, `Ocupación`, `Contraseña`) VALUES
-(1, 'Rodolfo', 'Reparaciones', '123');
+(1, 'Rodolfo', 'Reparaciones', '123'),
+(2, 'Miguel', 'Reparaciones', 'qwneu237'),
+(3, 'Gerardo', 'Reparaciones', 'CS238hc');
 
 -- --------------------------------------------------------
 
@@ -83,17 +93,17 @@ CREATE TABLE `problema` (
 --
 
 INSERT INTO `problema` (`ID`, `Descripción`, `Estatus`) VALUES
-(1, 'Me duele la pilinga', 'Reportado'),
-(2, 'Me duele el pipi\r\n', 'En proceso de soluci'),
-(3, 'pene duro ayuda\r\n', 'Reportado'),
-(4, 'gaygaygayagyagagad', 'Reportado'),
-(5, '22222222222', 'Reportado'),
-(6, '23232323', 'Reportado'),
-(7, 'eeeeeeeeeeeeeeeeeeeeeeeeeeeeee Whawhaawhat!!\r\n', 'En proceso de soluci'),
-(8, 'Hola soy adolfo solo para reportar que odio a los putos negors\r\n\r\n', 'Reportado'),
-(9, 'Me duele el pico2', 'Reportado'),
-(10, 'niggaLap', 'Reportado'),
-(11, 'penennenenenene', 'En proceso de soluci');
+(1, 'Problema con computadora de escritorio: No envía imagen ', 'Reportado'),
+(2, 'Problema con laptop: Sistema demasiado lento', 'En proceso de soluci'),
+(3, 'Problema con teléfono de empresa: Parte de la pantalla táctil no responde', 'Reportado'),
+(4, 'Problema con computadora: Teclado no responde de forma apropiada (no funcionan las teclas I, O ni K)', 'Reportado'),
+(5, 'Problema con tablet: Bloqueo por intentos excesivos de ingresar contraseña', 'Reportado'),
+(6, 'Problema con impresora: Al imprimir se salta varias líneas y la imagen sale incompleta ', 'Reportado'),
+(7, 'Problema con computadora de escritorio: Pantalla cambia entre colores constantemente ', 'En proceso de soluci'),
+(8, 'Problema con Tablet: Equipo no logra encender\r\n', 'Reportado'),
+(9, 'Problema con Laptop: No puede conectarse a internet', 'Reportado'),
+(10, 'Problema con tablet: Carece de software necesario para trabajar, no se puede descargar', 'Reportado'),
+(11, 'Problema con impresora: Nunca sale la impresión y la hoja queda en blanco', 'En proceso de soluci');
 
 -- --------------------------------------------------------
 
@@ -172,8 +182,9 @@ CREATE TABLE `usuario` (
 INSERT INTO `usuario` (`ID`, `Nombre`, `Contraseña`, `Area`) VALUES
 (1, 'Admin', 'secretoAdmin', 'Administrador'),
 (2, 'Adolfo', '123', 'RH'),
-(3, 'HermanoDelAdolfo', '123', 'Joto'),
-(4, 'Nigger4', '123', 'nigga');
+(3, 'Carlos ', '3949hf7v', 'Ventas '),
+(4, 'Vicente', 'c9d78hzxc', 'Logística'),
+(5, 'Roberto', 'chd89ewh', 'Producción');
 
 -- --------------------------------------------------------
 
@@ -183,25 +194,25 @@ INSERT INTO `usuario` (`ID`, `Nombre`, `Contraseña`, `Area`) VALUES
 
 CREATE TABLE `usuarioproblema` (
   `IdUsuario` int(11) NOT NULL,
-  `IdProblema` int(11) NOT NULL,
-  `AreaProblema` varchar(15) NOT NULL
+  `IdProblema` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `usuarioproblema`
 --
 
-INSERT INTO `usuarioproblema` (`IdUsuario`, `IdProblema`, `AreaProblema`) VALUES
-(2, 2, 'RH'),
-(2, 3, 'RH'),
-(2, 4, 'RH'),
-(2, 5, 'RH'),
-(2, 6, 'RH'),
-(2, 7, 'RH'),
-(2, 8, 'RH'),
-(2, 9, 'RH'),
-(2, 11, 'RH'),
-(4, 10, 'nigga');
+INSERT INTO `usuarioproblema` (`IdUsuario`, `IdProblema`) VALUES
+(2, 1),
+(2, 5),
+(2, 9),
+(3, 2),
+(3, 6),
+(3, 10),
+(4, 3),
+(4, 7),
+(4, 11),
+(5, 4),
+(5, 8);
 
 --
 -- Índices para tablas volcadas
@@ -252,7 +263,7 @@ ALTER TABLE `usuario`
 -- Indices de la tabla `usuarioproblema`
 --
 ALTER TABLE `usuarioproblema`
-  ADD KEY `IdUsuario` (`IdUsuario`,`IdProblema`,`AreaProblema`),
+  ADD KEY `IdUsuario` (`IdUsuario`,`IdProblema`),
   ADD KEY `IdProblema` (`IdProblema`);
 
 --
@@ -263,7 +274,7 @@ ALTER TABLE `usuarioproblema`
 -- AUTO_INCREMENT de la tabla `citas`
 --
 ALTER TABLE `citas`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 
 --
 -- AUTO_INCREMENT de la tabla `problema`
@@ -281,7 +292,7 @@ ALTER TABLE `ticket`
 -- AUTO_INCREMENT de la tabla `usuario`
 --
 ALTER TABLE `usuario`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- Restricciones para tablas volcadas

@@ -2,7 +2,7 @@
 	$servername = "localhost";
 	$username = "root";
 	$password = "";
-	$database = "sara";
+	$database = "sistematicketsreporte";
 	
     $conn=mysqli_connect($servername,$username,$password,$database);
 
