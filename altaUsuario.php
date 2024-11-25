@@ -61,10 +61,10 @@
                            </button>
                            <div class="collapse navbar-collapse" id="navbarsExample04">
                               <ul class="navbar-nav mr-auto">
-                                 <li class="nav-item active">
+                                 <li class="nav-item">
                                     <a class="nav-link" href="index.html">Inicio</a>
                                  </li>
-                                 <li class="nav-item">
+                                 <li class="nav-item active">
                                    <a class="nav-link" href="FrmUsuario.html">Usuarios</a> 
                                  </li>
                                  <li class="nav-item">
@@ -84,9 +84,8 @@
       <!-- end header inner -->
       <!-- end header -->
       <!-- banner -->
-      <section class="banner_main">
+      <section class="banner_main6">
          <div id="banner1" class="carousel slide" data-ride="carousel">
-            
             <div class="carousel-inner">
                <div class="carousel-item active">
                   <div class="container">
@@ -97,11 +96,6 @@
                                  <span></span>
                                  <h1>Usuarios</h1>
                                  <p>Aqui puedes dar de alta a los usuarios</p>
-                              </div>
-                           </div>
-                           <div class="col-md-6">
-                              <div class="text_img">
-                                 <figure><img src="" alt=""/></figure>
                               </div>
                            </div>
                         </div>

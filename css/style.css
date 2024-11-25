@@ -328,14 +328,14 @@ ul.btn li:last-child {
 
 .navigation.navbar-dark .navbar-nav .nav-link:focus,
 .navigation.navbar-dark .navbar-nav .nav-link:hover {
-     color: #473A4D;
+     color: #FCC483;
 }
 
 .navigation.navbar-dark .navbar-nav .active>.nav-link,
 .navigation.navbar-dark .navbar-nav .nav-link.active,
 .navigation.navbar-dark .navbar-nav .nav-link.show,
 .navigation.navbar-dark .navbar-nav .show>.nav-link {
-     color: #473A4D;
+     color: #FCC483;
 }
 
 .navbar-expand-md .navbar-nav {
@@ -380,8 +380,8 @@ ul.btn li:last-child {
 
 /** banner section **/
 
-.banner_main {
-     background-color: #291B26 ;
+.banner_main1 {
+     background-image: url(../images/UsuarioCHeader.png);
      background-repeat: no-repeat;
      min-height: 900px;
      background-size: 100% 100%;
@@ -391,7 +391,7 @@ ul.btn li:last-child {
      align-items: center;
      position: relative;
 }
-.banner_main::before {
+.banner_main1::before {
      position: absolute;
      content: "";
      width:50px; 
@@ -401,7 +401,7 @@ ul.btn li:last-child {
      bottom: -38px;
      right: 38px;
 }
-.banner_main::after {
+.banner_main1::after {
      position: absolute;
      content: "";
      width:50px; 
@@ -411,6 +411,199 @@ ul.btn li:last-child {
      bottom: -38px;
      left: 38px;
 }
+
+.banner_main2 {
+     background-image: url(../images/BannerLogin.png);
+     background-repeat: no-repeat;
+     min-height: 900px;
+     background-size: 100% 100%;
+     display: flex;
+     justify-content: center;
+     align-content: center;
+     align-items: center;
+     position: relative;
+}
+.banner_main2::before {
+     position: absolute;
+     content: "";
+     width:50px; 
+     height:40px;
+     background: url(../images/cross.png);
+     background-repeat: no-repeat;
+     bottom: -38px;
+     right: 38px;
+}
+.banner_main2::after {
+     position: absolute;
+     content: "";
+     width:50px; 
+     height:40px;
+     background: url(../images/cross.png);
+     background-repeat: no-repeat;
+     bottom: -38px;
+     left: 38px;
+}
+
+.banner_main3 {
+     background-image: url(../images/BannerReporte.jpg);
+     background-repeat: no-repeat;
+     min-height: 900px;
+     background-size: 100% 100%;
+     display: flex;
+     justify-content: center;
+     align-content: center;
+     align-items: center;
+     position: relative;
+}
+.banner_main3::before {
+     position: absolute;
+     content: "";
+     width:50px; 
+     height:40px;
+     background: url(../images/cross.png);
+     background-repeat: no-repeat;
+     bottom: -38px;
+     right: 38px;
+}
+.banner_main3::after {
+     position: absolute;
+     content: "";
+     width:50px; 
+     height:40px;
+     background: url(../images/cross.png);
+     background-repeat: no-repeat;
+     bottom: -38px;
+     left: 38px;
+}
+
+.banner_main4 {
+     background-image: url(../images/BannerMant.jpg);
+     background-repeat: no-repeat;
+     min-height: 900px;
+     background-size: 100% 100%;
+     display: flex;
+     justify-content: center;
+     align-content: center;
+     align-items: center;
+     position: relative;
+}
+.banner_main4::before {
+     position: absolute;
+     content: "";
+     width:50px; 
+     height:40px;
+     background: url(../images/cross.png);
+     background-repeat: no-repeat;
+     bottom: -38px;
+     right: 38px;
+}
+.banner_main4::after {
+     position: absolute;
+     content: "";
+     width:50px; 
+     height:40px;
+     background: url(../images/cross.png);
+     background-repeat: no-repeat;
+     bottom: -38px;
+     left: 38px;
+}
+
+.banner_main5 {
+     background-image: url(../images/BannerAdmin.png);
+     background-repeat: no-repeat;
+     min-height: 900px;
+     background-size: 100% 100%;
+     display: flex;
+     justify-content: center;
+     align-content: center;
+     align-items: center;
+     position: relative;
+}
+.banner_main5::before {
+     position: absolute;
+     content: "";
+     width:50px; 
+     height:40px;
+     background: url(../images/cross.png);
+     background-repeat: no-repeat;
+     bottom: -38px;
+     right: 38px;
+}
+.banner_main5::after {
+     position: absolute;
+     content: "";
+     width:50px; 
+     height:40px;
+     background: url(../images/cross.png);
+     background-repeat: no-repeat;
+     bottom: -38px;
+     left: 38px;
+}
+
+.banner_main6 {
+     background-image: url(../images/BannerSubirUsuario.png);
+     background-repeat: no-repeat;
+     min-height: 900px;
+     background-size: 100% 100%;
+     display: flex;
+     justify-content: center;
+     align-content: center;
+     align-items: center;
+     position: relative;
+}
+.banner_main6::before {
+     position: absolute;
+     content: "";
+     width:50px; 
+     height:40px;
+     background: url(../images/cross.png);
+     background-repeat: no-repeat;
+     bottom: -38px;
+     right: 38px;
+}
+.banner_main6::after {
+     position: absolute;
+     content: "";
+     width:50px; 
+     height:40px;
+     background: url(../images/cross.png);
+     background-repeat: no-repeat;
+     bottom: -38px;
+     left: 38px;
+}
+
+.banner_main7 {
+     background-image: url(../images/BannerTablas.jpg);
+     background-repeat: no-repeat;
+     min-height: 900px;
+     background-size: 100% 100%;
+     display: flex;
+     justify-content: center;
+     align-content: center;
+     align-items: center;
+     position: relative;
+}
+.banner_main7::before {
+     position: absolute;
+     content: "";
+     width:50px; 
+     height:40px;
+     background: url(../images/cross.png);
+     background-repeat: no-repeat;
+     bottom: -38px;
+     right: 38px;
+}
+.banner_main7::after {
+     position: absolute;
+     content: "";
+     width:50px; 
+     height:40px;
+     background: url(../images/cross.png);
+     background-repeat: no-repeat;
+     bottom: -38px;
+     left: 38px;
+}
+
 .text-bg {
      text-align: left;
 }
@@ -616,6 +809,12 @@ ul.btn li:last-child {
 
 .our_products .product_box figure {
      margin: 0;
+}
+
+.imagenes{
+     width: 200px;
+     height: 150px;
+     display: relative;
 }
 
 .our_products .product_box h3 {

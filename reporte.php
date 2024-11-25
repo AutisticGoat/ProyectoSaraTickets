@@ -92,9 +92,8 @@ echo<<<HTML
       <!-- end header inner -->
       <!-- end header -->
       <!-- banner -->
-      <section class="banner_main">
+      <section class="banner_main3">
          <div id="banner1" class="carousel slide" data-ride="carousel">
-            
             <div class="carousel-inner">
                <div class="carousel-item active">
                   <div class="container">
