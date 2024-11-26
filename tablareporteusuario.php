@@ -13,6 +13,8 @@ if($queryCUP->execute())
 
    echo '<link rel="stylesheet" href="css/Guti.css">
 
+
+
 <div class="table-wrapper" role="region" tabindex="0">
 <table class="fl-table">
     <h2>Tus reportes</h2>
@@ -35,7 +37,7 @@ if($queryCUP->execute())
    while($rowCUP = $resultCUP->fetch_assoc())
    {
       $idProblemaActual = $rowCUP['IdProblema'];
-      $areaProblemaActual = $rowCUP['AreaProblema'];
+      
 
       //Conseguir Ticket con el Id del Problema Actual
 
@@ -75,6 +77,16 @@ if($queryCUP->execute())
 
       $horaenTicketActual = $rowCH['HoraEntrada'];
       $horasaTicketActual = $rowCH['HoraSalida'];
+
+      $string_queryCN = "SELECT * FROM usuario u INNER JOIN usuarioproblema up on u.ID = up.IdUsuario INNER JOIN problematicket pt on up.IdProblema = pt.IdProblema INNER JOIN ticket t on pt.IdTicket = t.ID WHERE u.ID = ? ORDER BY t.HoraEntrada DESC";  
+      $queryCN = $conn -> prepare($string_queryCN);
+      $idUsuarioProblemaActual = $_SESSION['idUsuario'];
+      $queryCN->bind_param("i",$idUsuarioProblemaActual);
+      $queryCN->execute();
+      $resultCN = $queryCN->get_result();
+      $rowCN = $resultCN->fetch_assoc();
+  
+      $areaProblemaActual = $rowCN['Area'];
 
       //Al fin mostrar la fila de tabla con los datos
 

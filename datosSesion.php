@@ -70,6 +70,7 @@ if (!$result || $result->num_rows == 0)
         $_SESSION['nombreMantenimiento'] = $nombreUsuario;
         $_SESSION['idMantenimiento'] = $rowM['ID'];
         $_SESSION['areaMantenimiento'] = $rowM['Opupación'];
+        $_SESSION['borro'] = 0;
 
         header('Location: indexMAN.html');
         //Va a regresar aqui, cuando se tenga seccion de mantenimiento mandar ahi en vez.
@@ -83,6 +84,7 @@ else
     $_SESSION['nombreUsuario'] = $nombreUsuario;
     $_SESSION['idUsuario'] = $row['ID'];
     $_SESSION['areaUsuario'] = $row['Area'];
+    $_SESSION['borro'] = 0;
     header('Location: index.php');
 }
 
@@ -94,6 +96,7 @@ else
         $_SESSION['nombreUsuario'] = $nombreUsuario;
         $_SESSION['idUsuario'] = $row['ID'];
         $_SESSION['areaUsuario'] = $row['Area'];
+        $_SESSION['borro'] = 0;
         header('Location: indexAD.html');
     }
 
