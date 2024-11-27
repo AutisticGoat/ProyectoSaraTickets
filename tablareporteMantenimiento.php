@@ -31,12 +31,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 $string_queryCP = "SELECT * FROM usuarioproblema up INNER JOIN problematicket pt ON up.IdProblema = pt.IdProblema INNER JOIN ticket t ON t.id = pt.IdTicket";
 
 if(!empty($filtroNombre)){
-   if(!empty($filtroEstado)){ $string_queryCP = "$string_queryCP AND WHERE up.IdUsuario = (SELECT ID FROM usuario  WHERE Nombre LIKE '%$filtroNombre%') ";
+   if(!empty($filtroEstado)){ $string_queryCP = "$string_queryCP AND up.IdUsuario = (SELECT ID FROM usuario  WHERE Nombre LIKE '%$filtroNombre%') ";
    } else { $string_queryCP = "$string_queryCP WHERE up.IdUsuario = (SELECT ID FROM usuario  WHERE Nombre LIKE '%$filtroNombre%') ";}
 }
 
 if(!empty($filtroEstado)){ 
-   if (!empty($filtroNombre)){$string_queryCP = "$string_queryCP AND WHERE up.IdProblema = ANY (SELECT ID FROM problema  WHERE Estatus LIKE '%$filtroEstado%')";}
+   if (!empty($filtroNombre)){$string_queryCP = "$string_queryCP AND up.IdProblema = ANY (SELECT ID FROM problema  WHERE Estatus LIKE '%$filtroEstado%')";}
    else  {$string_queryCP = "$string_queryCP WHERE up.IdProblema = ANY (SELECT ID FROM problema  WHERE Estatus LIKE '%$filtroEstado%')";}
 };
 

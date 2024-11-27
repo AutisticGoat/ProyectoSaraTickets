@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 25-11-2024 a las 05:44:37
+-- Tiempo de generación: 27-11-2024 a las 04:59:00
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -94,16 +94,16 @@ CREATE TABLE `problema` (
 
 INSERT INTO `problema` (`ID`, `Descripción`, `Estatus`) VALUES
 (1, 'Problema con computadora de escritorio: No envía imagen ', 'Reportado'),
-(2, 'Problema con laptop: Sistema demasiado lento', 'En proceso de soluci'),
+(2, 'Problema con laptop: Sistema demasiado lento', 'Solucionado'),
 (3, 'Problema con teléfono de empresa: Parte de la pantalla táctil no responde', 'Reportado'),
 (4, 'Problema con computadora: Teclado no responde de forma apropiada (no funcionan las teclas I, O ni K)', 'Reportado'),
 (5, 'Problema con tablet: Bloqueo por intentos excesivos de ingresar contraseña', 'Reportado'),
-(6, 'Problema con impresora: Al imprimir se salta varias líneas y la imagen sale incompleta ', 'Reportado'),
-(7, 'Problema con computadora de escritorio: Pantalla cambia entre colores constantemente ', 'En proceso de soluci'),
+(6, 'Problema con impresora: Al imprimir se salta varias líneas y la imagen sale incompleta ', 'En proceso'),
+(7, 'Problema con computadora de escritorio: Pantalla cambia entre colores constantemente ', 'En proceso'),
 (8, 'Problema con Tablet: Equipo no logra encender\r\n', 'Reportado'),
 (9, 'Problema con Laptop: No puede conectarse a internet', 'Reportado'),
 (10, 'Problema con tablet: Carece de software necesario para trabajar, no se puede descargar', 'Reportado'),
-(11, 'Problema con impresora: Nunca sale la impresión y la hoja queda en blanco', 'En proceso de soluci');
+(11, 'Problema con impresora: Nunca sale la impresión y la hoja queda en blanco', 'En proceso');
 
 -- --------------------------------------------------------
 
@@ -277,6 +277,12 @@ ALTER TABLE `citas`
   MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 
 --
+-- AUTO_INCREMENT de la tabla `mantenimiento`
+--
+ALTER TABLE `mantenimiento`
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
 -- AUTO_INCREMENT de la tabla `problema`
 --
 ALTER TABLE `problema`
@@ -292,7 +298,7 @@ ALTER TABLE `ticket`
 -- AUTO_INCREMENT de la tabla `usuario`
 --
 ALTER TABLE `usuario`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- Restricciones para tablas volcadas

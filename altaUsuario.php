@@ -126,7 +126,15 @@
             <div class="row">
                <div class="col-md-10 offset-md-1">
                   <form id="request" class="main_form" method="post">
+
                      <div class="row">
+                        <div class="col-md-12 ">
+                           <label>Tipo de Usuario</label>
+                           <select class="Select1" name="tipoUsuario" value="Usuario" selected required>
+                              <option value="Usuario">Usuario</option>
+                              <option value="Mantenimiento">Mantenimiento</option>
+                              </select>
+                        </div>
                         <div class="col-md-12 ">
                            <input class="contactus" placeholder="Usuario" type="text" name="nombreUsuario"> 
                         </div>
@@ -140,6 +148,7 @@
                            <button class="send_btn">Subir</button>
                         </div>
                      </div>
+
                   </form>
                </div>
             </div>
@@ -165,21 +174,46 @@ require_once("conn.php");
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-    $nombreUsuario = $_POST['nombreUsuario'];
-    $areaUsuario = $_POST['areaUsuario'];
-    $contraseñaUsuario = $_POST['contraUsuario'];
 
-    $queryAS = $conn->prepare("INSERT INTO usuario (Nombre,Area,Contraseña) VALUES (?,?,?)");
-    $queryAS->bind_param("sss",$nombreUsuario,$areaUsuario,$contraseñaUsuario);
-    if($queryAS->execute())
-    {
-        echo'<script>window.alert("Usuario registrado correctamente")</script>';
-    }
-    else
-    {
-        echo'<script>window.alert("Error: '.htmlspecialchars($conn->error).'")</script>';
-    }
-    
+
+
+   if($_POST['tipoUsuario'] == "Usuario")
+   {
+      $nombreUsuario = $_POST['nombreUsuario'];
+      $areaUsuario = $_POST['areaUsuario'];
+      $contraseñaUsuario = $_POST['contraUsuario'];
+      $queryAS = $conn->prepare("INSERT INTO usuario (Nombre,Area,Contraseña) VALUES (?,?,?)");
+      $queryAS->bind_param("sss",$nombreUsuario,$areaUsuario,$contraseñaUsuario);
+      if($queryAS->execute())
+      {
+          echo'<script>window.alert("Usuario registrado correctamente")</script>';
+      }
+      else
+      {
+          echo'<script>window.alert("Error: '.htmlspecialchars($conn->error).'")</script>';
+      }
+      
+  
+   }
+   else if ($_POST['tipoUsuario'] == "Mantenimiento")
+   {
+      $nombreUsuario = $_POST['nombreUsuario'];
+      $areaUsuario = $_POST['areaUsuario'];
+      $contraseñaUsuario = $_POST['contraUsuario'];
+      $queryASM = $conn->prepare("INSERT INTO mantenimiento (Nombre,Ocupación,Contraseña) VALUES (?,?,?)");
+      $queryASM->bind_param("sss",$nombreUsuario,$areaUsuario,$contraseñaUsuario);
+      if($queryASM->execute())
+      {
+          echo'<script>window.alert("Usuario registrado correctamente")</script>';
+      }
+      else
+      {
+          echo'<script>window.alert("Error: '.htmlspecialchars($conn->error).'")</script>';
+      }
+
+   }
+
+
 
 
 }
